@@ -6,7 +6,7 @@
   --secondary-color: #2B2D42;
   --terciary-color: #D90429;
   --fourth-color: #457B9D;
-  --fifth-color: #A8DADC;
+  --fifth-color: #e5e5e5;
 }
 
 body {
@@ -17,6 +17,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--fifth-color)
 }
 
 code {
@@ -45,7 +46,7 @@ code {
 }
 
 .nav-header{
-  background-color: var(--fifth-color);
+  background-color: var(--secondary-color);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -56,7 +57,7 @@ code {
   font-size: 1.75rem;
   background: transparent;
   border-color: transparent;
-  color: var(--terciary-color);
+  color: var(--primary-color);
   transition: var(--transition);
   cursor: pointer;
   animation: bounce 2s ease-in-out infinite;
@@ -102,7 +103,7 @@ code {
 
 .logo2 {
   font-size: 25px;
-  color: var(--terciary-color);
+  color: var(--primary-color);
   font-family: 'Zilla Slab', serif;
 }
 
@@ -157,6 +158,7 @@ code {
   width: 20%;
   font-size: large;
   margin-top: 30px;
+  margin-bottom: 30px;
   height: 40px;
   border-radius: 8px;
 }
@@ -191,12 +193,82 @@ code {
   margin: 5rem auto;
   display: grid;
   gap: 2rem;
+  font-family: 'Zilla Slab', serif;
+}
+
+.booklist h2{
+  font-size:25px;
+}
+
+.booklist button{
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  color: var(--fourth-color);
+  font-size: 1rem;
+  cursor: pointer;
+  padding-left: 0.25rem;
 }
 
 .book {
   background: #fff;
   border-radius: 1rem;
   padding: 1rem 2rem;
+}
+
+.tags {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 16px 8px 0;
+  padding: 0 10px 0 12px;
+  background: var(--terciary-color);
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px var(--terciary-color);
+  box-shadow: 0 1px 2px var(--terciary-color);
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  text-shadow: var(--terciary-color);
+  font-weight: bold;
+}
+
+.section-center {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  padding: 2rem;
+  font-family: 'Zilla Slab', serif;
+}
+
+.add-btn {
+  text-transform: capitalize;
+  width: 10rem;
+  height: 1.5rem;
+  display: grid;
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-1);
+  margin: 0 auto;
+  font-size: 0.85rem;
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.grocery-form h3 {
+  color: var(--clr-primary-1);
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 676px) {

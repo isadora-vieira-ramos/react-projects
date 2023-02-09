@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import {BiHomeAlt} from 'react-icons/bi';
 import {BiLibrary} from 'react-icons/bi';
 import {BiBookAdd} from 'react-icons/bi';
+import {GoChecklist} from 'react-icons/go';
+
 function Sidebar() {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
@@ -19,6 +21,7 @@ function Sidebar() {
         <Link className='links' onClick={()=> closeSidebar()} to="/"><BiHomeAlt></BiHomeAlt>Home</Link>
         <Link className='links' onClick={()=> closeSidebar()} to="/books"><BiLibrary></BiLibrary>Your Books</Link>
         <Link className='links' onClick={()=> closeSidebar()} to="/book"><BiBookAdd></BiBookAdd>New Book</Link>
+        <Link className='links' onClick={()=> closeSidebar()} to="/tbr-list"><GoChecklist></GoChecklist>To be read list</Link>
       </div>
     </aside>
   );

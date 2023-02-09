@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddBook from './AddBook';
 import List from './List';
+import ToBeReadList from './ToBeReadList';
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<List></List>}/>
         <Route path='/book' element={<AddBook></AddBook>} />
         <Route path='/books' element={<List></List>}/>
+        <Route path='/tbr-list' element={<ToBeReadList></ToBeReadList>}/> 
       </Routes>
     </Router>
 

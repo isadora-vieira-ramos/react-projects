@@ -3,7 +3,7 @@ import React, { useState, useContext } from 'react';
 const AppContext = React.createContext();
 
 const getLocalStorageLists = () => {
-  let list = localStorage.getItem('list');
+  let list = localStorage.getItem('bookList');
   if (list) {
     return (list = JSON.parse(localStorage.getItem('bookList')));
   } else {

@@ -1,21 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Book  = (props) => {
   const {name, genres, notes} = props;
-  const clickHandler = (e) =>{
-    console.log(e);
-    alert("Hello world");
-  };
-  const complexExample = (author) => {
-    alert(author);
-  };
+  const [readMore, setReadMore] = useState(false);
+  
   return (
-    <article className="book" onMouseOver={()=>{console.log(name)}}>
-      <h3 onClick={()=> alert('Exemplo 2')}>{name}</h3>
+    <article className="book">
+      <h3>{name}</h3>
+      <p>
+        {readMore ? notes : `${notes.substring(0, 200)}...`}
+        {notes.length > 200 && (
+          <button onClick={() => setReadMore(!readMore)}>
+            {readMore ? 'show less' : '  read more'}
+          </button>
+        )}
+      </p>
       {
         genres.map((item) => {
             const {value, id} = item;
-            return <p key={id}>{value}</p>
+            return <p className='tags' key={id}>{value}</p>
         })
       }
     </article>); 
