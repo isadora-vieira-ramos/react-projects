@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { useGlobalContext } from './context';
 import Select from 'react-select';
 import genres from './genres';
+import { useNavigate } from 'react-router-dom';
 
 function AddBook() {
   const { list, setList, isSidebarOpen } = useGlobalContext();
@@ -9,7 +10,8 @@ function AddBook() {
   const [name, setName] = useState('');
   const [notes, setNotes] = useState('');
   const [selectedGenres, setSelectedGenres] = useState([]);
-
+  const navigate = useNavigate();
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     var newBook = {
@@ -29,6 +31,7 @@ function AddBook() {
     setName('');
     setNotes('');
     setSelectedGenres([]);
+    navigate('/books');
   }
 
   const changeClassName = () =>{

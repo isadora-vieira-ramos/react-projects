@@ -40,6 +40,18 @@ const genres = [
         label: "Horror", 
         value: "Horror", 
         color: "green"
+    },
+    {
+        id: 8, 
+        label: "Historical Fiction", 
+        value: "Historical Fiction", 
+        color: "Purple"
+    },
+    {
+        id: 9, 
+        label: "LGBTQIA+", 
+        value: "LGBTQIA", 
+        color: "black"
     }
 ];
 

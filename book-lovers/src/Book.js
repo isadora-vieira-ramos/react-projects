@@ -1,12 +1,16 @@
 import React, {useState} from 'react'
+import {RiDeleteBinLine} from 'react-icons/ri';
 
 const Book  = (props) => {
-  const {name, genres, notes} = props;
+  const {name, genres, notes, deleteItem, list, id} = props;
   const [readMore, setReadMore] = useState(false);
   
   return (
     <article className="book">
-      <h3>{name}</h3>
+      <div className='delete-div'>
+        <h3>{name}</h3>
+        <RiDeleteBinLine className='delete-icon' onClick={() => deleteItem(id)}></RiDeleteBinLine>
+      </div>
       <p>
         {readMore ? notes : `${notes.substring(0, 200)}...`}
         {notes.length > 200 && (
@@ -20,7 +24,7 @@ const Book  = (props) => {
             const {value, id} = item;
             return <p className='tags' key={id}>{value}</p>
         })
-      }
+      }  
     </article>); 
 }
 
