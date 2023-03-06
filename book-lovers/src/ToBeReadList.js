@@ -38,7 +38,27 @@ function ToBeReadList() {
   }
 
   const onDragEnd = result => {
+    const {destination, source, draggableId} = result;
 
+    if(!destination){
+      return;
+    }
+
+    if(destination.droppableId === source.droppableId &&
+      destination.index === source.index){
+      return;
+    }
+
+    const newArray = Array.from(list.map(item => {
+      return item;
+    }));
+
+    const item = list.find(x => x.id === draggableId);
+
+    newArray.splice(source.index, 1);
+    newArray.splice(destination.index, 0, item);
+
+    setList(newArray);
   }
 
   useEffect(() => {
